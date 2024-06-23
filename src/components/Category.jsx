@@ -15,10 +15,10 @@ const selectedCategory=useSelector((state)=>state.category.category)
     <div className="flex mx-3 flex-col my-3">
       <h1 className="font-bold text-3xl text-black">Data Items</h1>
       <div className="flex gap-3">
-        <button onClick={()=>dispatch(setCategory('All'))} name='All' className={`p-2 mx-3 border rounded-lg text-white bg-red-500 font-medium hover:bg-green-500 hover:font-bold ${selectedCategory==="All"?'bg-green-400':'bg-red-500'}`}>All</button>
+        <button onClick={()=>dispatch(setCategory('All'))} name='All' className={`p-2 mx-3 border rounded-lg text-white font-medium hover:bg-green-500 hover:font-bold ${selectedCategory==="All"?'bg-green-400':'bg-red-500'}`}>All</button>
 
         {catData.map((category, id)=>{
-       return (<button key={id} name={category} onClick={()=>myCategory(category)} className={`p-2 mx-3 border rounded-lg text-white bg-red-500 font-medium hover:bg-green-500 hover:font-bold ${selectedCategory===category?'bg-green-400':'bg-red-500'}`} >{category}</button>)}
+       return (<button key={id} name={category} onClick={()=>myCategory(category)} className={`p-2 mx-3 border rounded-lg text-white  font-medium hover:bg-green-500 hover:font-bold ${selectedCategory===category?'bg-green-400':'bg-red-500'}`} >{category}</button>)}
           )}
 
       </div>
